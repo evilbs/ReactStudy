@@ -1,0 +1,30 @@
+<html> 
+<head></head> 
+<style type="text/css">
+#container{
+    height:80px;
+}
+
+.box{
+    border:1px solid red;
+    width:150px;
+    height:50px;
+    float:left;
+    margin:2px;
+}
+
+#log{
+    float:right;
+    clear:both;
+}
+</style>
+<body>
+    你可以输入a,b,c,d,e,f五个元素进行测试，和上一次的元素对比看变化：<br/>
+    
+    元素:<input type="text" id="txtValue" style="width:250px;height:35px;"/>
+    <button id="btnUpdate">更新</button>
+    <div id="container"></div>
+    <div id="logs"></div>
+</body>
+<script src="react.js"></script> 
+</html>
