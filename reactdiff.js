@@ -6,8 +6,7 @@ var data = {
 	'e': { name: 'e', c: 'dodgerblue' },
 	'f': { name: 'f', c: 'gray' }
 }
-
-/*实现react diff算法*/
+ 
 /** 
  * react diff 算法 
 */
