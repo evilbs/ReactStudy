@@ -6,7 +6,7 @@ var data = {
 	'e': { name: 'e', c: 'dodgerblue' },
 	'f': { name: 'f', c: 'gray' }
 }
- 
+
 /*实现react diff算法*/
 /** 
  * react diff 算法 
@@ -89,7 +89,7 @@ function patch(updates, container) {
 		}
 	}
 }
- 
+
 
 /**
  * 实现一个DOMComponent
@@ -116,7 +116,7 @@ DOMComponent.prototype.receiveComponent = function (nextChildren) {
 	this.children = nextChildren;
 }
 
-/**开始测试 */ 
+/**开始测试 */
 var initData = "a,b,c,d";
 var initChildren = createElements(initData);
 document.getElementById('txtValue').value = initData;
