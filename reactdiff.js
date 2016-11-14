@@ -91,7 +91,7 @@ function patch(updates, container) {
 
 
 /**
- * 实现一个DOMComponent
+ * DOMComponent
  */
 function DOMComponent(children, container) {
 	this.children = children;
