@@ -20,7 +20,8 @@ function diff(prevChildren, nextChildren, container) {
 	for (var name in nextChildren) {
 		var prevChild = prevChildren && prevChildren[name];
 		var nextChild = nextChildren[name];
-		if (prevChild && prevChild.element === nextChild.element) {//位置移动
+		if (prevChild && prevChild.element === nextChild.element) {
+			//元素位置移动
 			if (prevChild.mountIndex < lastIndex) {
 				updates.push({
 					type: 'move',
@@ -33,7 +34,8 @@ function diff(prevChildren, nextChildren, container) {
 
 			lastIndex = Math.max(prevChild.mountIndex, lastIndex);
 			lastPlaceNode = nodes[prevChild.mountIndex];
-		} else {//新增
+		} else {
+			//元素新增
 			if (prevChild) {
 				lastIndex = Math.max(prevChild.mountIndex, lastIndex);
 			}
@@ -53,7 +55,8 @@ function diff(prevChildren, nextChildren, container) {
 		nextIndex++;
 	}
 
-	for (var name in prevChildren) {//处理删除 
+	for (var name in prevChildren) {
+		//元素删除 
 		var nextChild = nextChildren[name];
 		if (!nextChild) {
 			updates.push({
@@ -67,7 +70,7 @@ function diff(prevChildren, nextChildren, container) {
 }
 
 /**
- * 增量更新到dom上
+ * 增量更新到dom
  */
 function patch(updates, container) {
 	for (var index in updates) {
