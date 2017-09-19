@@ -8,7 +8,7 @@ var data = {
 }
  
 /** 
- * react diff 算法  //
+ * react diff 算法
 */
 function diff(prevChildren, nextChildren, container) {
 	var nodes = container.childNodes;
